@@ -17,10 +17,10 @@ class SNMPWrapper
         }
     }
 
-    public function setHost($host, $comunity)
+    public function setHost($host, $community, $version=1)
     {
         try {
-            $this->instance = new Snmp($host, $comunity);
+            $this->instance = new Snmp($host, $community, $version);
         } catch (Exception $e) {
             throw new Exception('Error initializing Nelisy/Snmp', 1);
         }
