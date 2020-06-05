@@ -1,4 +1,5 @@
 # SNMPWrapper
+This is a fork of onurkose/snmpwrapper
 Laravel SNMP package wrapper for Nelisys/Snmp class
 
 ## Requirements
@@ -50,7 +51,7 @@ class SNMPController extends Controller
     {
         $snmp = new SNMPWrapper();
         
-        $snmp::setHost('192.168.0.1', 'public');
+        $snmp::setHost('192.168.0.1', 'public', '2c');
         
         dd($snmp::get('.1.3.6.1.2.1.1.1.0'));
     }
